@@ -63,3 +63,24 @@ body {
     width: 33.3%;
     padding: 1rem;
 }
+
+.infoImg {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    justify-content: center;
+    margin-top: 10rem;
+}
+
+.infoImg p {
+    width: 500px;
+    background-color: rgba(24, 24, 24, 0.63);
+    color: white;
+    padding: 1rem;
+    z-index: 1;
+    margin-right: -10em;
+}
+
+.infoImg img {
+    width: 40%;
+}
