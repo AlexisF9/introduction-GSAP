@@ -8,9 +8,6 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div class="section1">
-
-    </div>
     <div class="div">
         <div class="title">
             <h1>Alexis Flacher</h1>
@@ -32,6 +29,15 @@
             <p class="text">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Illum quas similique facilis nihil. Nesciunt dolorem assumenda modi officiis tempora reiciendis incidunt animi optio. Voluptas, ipsum minus distinctio commodi dolorem recusandae.</p>    
         </div>
     </div>
+
+    <div class="images">
+        <img src="assets/img.jpg"/>
+        <img src="assets/img.jpg"/>
+        <img src="assets/img.jpg"/>
+        <img src="assets/img.jpg"/>
+        <img src="assets/img.jpg"/>
+        <img src="assets/img.jpg"/>
+    </div>
     
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/gsap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/CSSRulePlugin.min.js"></script>
@@ -48,7 +54,7 @@
                 trigger: ".a",
                 start: "top 50%",
                 end: "top 50px",
-                scrub: 2
+                scrub: 3
             },
             x: -400
         });
@@ -58,7 +64,7 @@
                 trigger: ".a",
                 start: "top 50%",
                 end: "top 100px",
-                scrub: 2
+                scrub: 3
             },
             x: 400
         });
@@ -66,10 +72,55 @@
         gsap.to(".text", {
             y: 0,
             ease: "Power4.easeOut",
-            duration: 0.8,
+            duration: 1.5,
             stagger: 0.1,
             opacity: 1
         })
+
+        gsap.to(".images img", {
+            scrollTrigger: {
+                trigger: ".images img",
+                start: "top 50%",
+                end: "top 50px",
+                scrub: 3,
+                markers: true
+            },
+            x: -400
+        });
+
+    
+       /* gsap.to(".images img", {
+            scrollTrigger: {
+                trigger: ".images img",
+                start: "top 50%",
+                end: "top 50px",
+                duration: 0.8,
+                ease: "power3",
+                markers: true
+            },
+            transform: "skew(1deg, 350deg)"
+        });
+
+
+
+
+        let proxy = { skew: 0 },
+        skewSetter = gsap.quickSetter(".images img", "skewY", "deg"), // fast
+        clamp = gsap.utils.clamp(-20, 20); // don't let the skew go beyond 20 degrees. 
+
+        ScrollTrigger.create({
+            onUpdate: (self) => {
+                let skew = clamp(self.getVelocity() / -300);
+                // only do something if the skew is MORE severe. Remember, we're always tweening back to 0, so if the user slows their scrolling quickly, it's more natural to just let the tween handle that smoothly rather than jumping to the smaller skew.
+                if (Math.abs(skew) > Math.abs(proxy.skew)) {
+                    proxy.skew = skew;
+                    gsap.to(proxy, {skew: 0, duration: 0.8, ease: "power3", overwrite: true, onUpdate: () => skewSetter(proxy.skew)});
+                }
+            }
+        });
+
+        // make the right edge "stick" to the scroll bar. force3D: true improves performance
+        gsap.set(".images img", {transformOrigin: "right center", force3D: true});*/
     </script>
 </body>
 </html>
