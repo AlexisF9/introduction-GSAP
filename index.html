@@ -31,12 +31,10 @@
     </div>
 
     <div class="images">
-        <img src="assets/img.jpg"/>
-        <img src="assets/img.jpg"/>
-        <img src="assets/img.jpg"/>
-        <img src="assets/img.jpg"/>
-        <img src="assets/img.jpg"/>
-        <img src="assets/img.jpg"/>
+        <img src="assets/gallery/img1.png"/>
+        <img src="assets/gallery/img2.jpg"/>
+        <img src="assets/gallery/img3.jpg"/>
+        <img src="assets/gallery/img4.jpg"/>
     </div>
 
     <div class="infoImg">
@@ -50,17 +48,21 @@
     <script>
         gsap.registerPlugin(ScrollTrigger);
 
-        /*gsap.to(".title", {
-            ease: "Power4.easeOut", duration: 1, 'clip-path': 'polygon(0% 100%, 100% 100%, 100% 0%, 0% 0%)', opacity: 1, y: 0
-        });*/
+        gsap.to(".title", {
+            ease: "Power4.easeOut", 
+            duration: 1, 
+            'clip-path': 'polygon(0% 100%, 100% 100%, 100% 0%, 0% 0%)', 
+            opacity: 1, 
+            y: 0
+        });
 
         // Première bande de texte
         gsap.to(".a", {
             scrollTrigger: {
                 trigger: ".a",
                 start: "top 50%",
-                end: "bottom 100px",
-                scrub: 3
+                end: "bottom top",
+                scrub: 3,
             },
             x: -400
         });
@@ -70,30 +72,44 @@
             scrollTrigger: {
                 trigger: ".a",
                 start: "top 50%",
-                end: "top 100px",
+                end: "top top",
                 scrub: 3
             },
             x: 400
         });
 
         // Paragraphes de textes
-        gsap.to(".text", {
+        /*gsap.to(".text", {
             y: 0,
             ease: "Power4.easeOut",
             duration: 1.5,
             stagger: 0.1,
             opacity: 1
-        })
+        })*/
 
         // Galerie photo
         gsap.to(".images img", {
             scrollTrigger: {
                 trigger: ".images",
-                start: "top bottom",
-                end: "bottom top",
-                scrub: 2
+                start: "top center",
+                end: "bottom 30%",
+                scrub: 2,
+                markers: true
             },
-            x: -400
+            x: "-100%"
+        });
+
+        // Apparition texte + image
+        gsap.to(".infoImg", {
+            scrollTrigger: {
+                trigger: ".infoImg",
+                start: "top 70%",
+                toggleActions: "play none none none",
+            },
+            ease: Power4.easeOut,
+            y: 0,
+            opacity: 1,
+            duration: 1,
         });
 
         // Paralax texte
@@ -102,8 +118,7 @@
             ease: "none",
             scrollTrigger: {
                 trigger: ".infoImg",
-                scrub: 1,
-                //markers: true
+                scrub: 1
             }
         });
 
@@ -113,8 +128,6 @@
             ease: "none",
             scrollTrigger: {
                 trigger: ".infoImg",
-                // start: "top bottom", // the default values
-                // end: "bottom top",
                 scrub: 1
             }, 
         });

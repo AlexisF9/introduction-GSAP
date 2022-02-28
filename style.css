@@ -14,8 +14,8 @@ body {
 
 .title {
     padding: 5rem;
-    /*opacity: 0;
-    transform: translateY(100px);*/
+    opacity: 0;
+    transform: translateY(100px);
 }
 
 .bandeText {
@@ -50,8 +50,8 @@ body {
 .paragraphe .text {
     width: 25%;
     padding: 2rem;
-    transform: translateY(100px);
-    opacity: 0;
+    /*transform: translateY(100px);
+    opacity: 0;*/
 }
 
 .images {
@@ -62,14 +62,17 @@ body {
 .images img {
     width: 33.3%;
     padding: 1rem;
+    border-radius: 20px;
 }
 
 .infoImg {
     display: flex;
     align-items: center;
-    width: 100%;
     justify-content: center;
+    width: 100%;
     margin-top: 10rem;
+    opacity: 0;
+    transform: translateY(50px);
 }
 
 .infoImg p {
