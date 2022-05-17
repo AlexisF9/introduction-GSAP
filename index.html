@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
+    
     <div class="div">
         <div class="title">
             <h1>Alexis Flacher</h1>
@@ -41,12 +42,17 @@
         <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Laborum beatae error repellendus voluptate placeat suscipit consequuntur nesciunt enim explicabo autem, quis excepturi. Dolorem ipsam maiores neque, suscipit animi nesciunt magni!</p>
         <img src="assets/img.jpg"/>
     </div>
-    
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/gsap.min.js"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.4/gsap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/CSSRulePlugin.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/ScrollTrigger.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.4/TextPlugin.min.js"></script>
+
     <script>
-        gsap.registerPlugin(ScrollTrigger);
+        gsap.registerPlugin(ScrollTrigger, TextPlugin);
+
+        var tl = new TimelineMax({ repeat: -1, repeatDelay: 3, yoyo: true })
+        tl.to(".title h3", {duration: 1, text: "Développeur frontend", delay: 1});
 
         gsap.to(".title", {
             ease: "Power4.easeOut", 

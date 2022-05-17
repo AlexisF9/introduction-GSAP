@@ -1,89 +1,97 @@
 * {
-    padding: 0;
-    margin: 0;
-    font-family: Arial, Helvetica, sans-serif;
+  padding: 0;
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
 }
 body {
-    height: 300vh;
+  height: 300vh;
 }
 
 .div {
-    height: 10rem;
-    margin-bottom: 5rem;
+  height: 10rem;
+  margin-bottom: 5rem;
 }
 
 .title {
-    padding: 5rem;
-    opacity: 0;
-    transform: translateY(100px);
+  padding: 5rem;
+  opacity: 0;
+  transform: translateY(100px);
 }
 
 .bandeText {
-    padding-bottom: 8rem;
-    padding-top: 2rem;
-    overflow: hidden;
+  padding-bottom: 8rem;
+  padding-top: 2rem;
+  overflow: hidden;
 }
 
 .a {
-    font-size: 50px;
-    text-transform: uppercase;
+  font-size: 50px;
+  text-transform: uppercase;
 }
 
 .b {
-    font-size: 50px;
-    transform: translateX(-50%);
-    text-transform: uppercase;
+  font-size: 50px;
+  transform: translateX(-50%);
+  text-transform: uppercase;
 }
 
 .infos {
-    margin-bottom: 3rem;
+  margin-bottom: 3rem;
 }
 
 .infos h3 {
-    margin-left: 2rem;
+  margin-left: 2rem;
 }
 
 .paragraphe {
-    display: flex;
+  display: flex;
 }
 
 .paragraphe .text {
-    width: 25%;
-    padding: 2rem;
-    /*transform: translateY(100px);
+  width: 25%;
+  padding: 2rem;
+  /*transform: translateY(100px);
     opacity: 0;*/
 }
 
 .images {
-    display: flex;
-    overflow: hidden;
+  display: flex;
+  overflow: hidden;
 }
 
 .images img {
-    width: 33.3%;
-    padding: 1rem;
-    border-radius: 20px;
+  width: 33.3%;
+  padding: 1rem;
+  border-radius: 20px;
 }
 
 .infoImg {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 100%;
-    margin-top: 10rem;
-    opacity: 0;
-    transform: translateY(50px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  margin-top: 10rem;
+  opacity: 0;
+  transform: translateY(50px);
 }
 
 .infoImg p {
-    width: 500px;
-    background-color: rgba(24, 24, 24, 0.63);
-    color: white;
-    padding: 1rem;
-    z-index: 1;
-    margin-right: -10em;
+  width: 500px;
+  background-color: rgba(24, 24, 24, 0.63);
+  color: white;
+  padding: 1rem;
+  z-index: 1;
+  margin-right: -10em;
 }
 
 .infoImg img {
-    width: 40%;
+  width: 40%;
+}
+
+.class1 {
+  color: red;
+}
+
+.class2 {
+  color: aqua;
 }

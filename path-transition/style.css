@@ -1,0 +1,43 @@
+*,
+html,
+body {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+.container,
+.container2 {
+  height: 100vh;
+  position: absolute;
+  width: 100%;
+  clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+}
+
+.container2 {
+  z-index: -1;
+}
+
+.container .img,
+.container2 .img {
+  background-size: cover;
+  height: 100vh;
+}
+
+.container .img {
+  background-image: url("https://france3-regions.francetvinfo.fr/image/nV2T0Hw1_hnm0_XxeNTTcxEDOPQ/600x400/regions/2022/05/15/6280fc4febcde_black-hole-messier-87-crop-max-res.jpg");
+}
+
+.container2 .img {
+  background-image: url("https://www.lyoncapitale.fr/wp-content/uploads/2020/09/trou-noir-espace-astronomie-univers.jpg.webp");
+}
+
+.container .content,
+.container2 .content {
+  color: white;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  text-transform: uppercase;
+  transform: translate(-50%, -50%);
+}
